@@ -1,11 +1,12 @@
 server:
-  port: 4200   # Change this from 4100 to another open port like 4200 or 8080
+  port: ${PORT:4200}
+
 
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/crm_db_wymu}
-    username: ${SPRING_DATASOURCE_USERNAME:crm_db_wymu_user}
-    password: ${SPRING_DATASOURCE_PASSWORD:q3dD3SXqTKU5IPVrZcZHgOptUkNJTMjt}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
