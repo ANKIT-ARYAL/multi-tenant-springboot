@@ -1,12 +1,9 @@
 server:
   port: ${PORT:4200}
 
-
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: ${DATABASE_URL}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -19,5 +16,3 @@ spring:
 
 jwt:
   secret: super-secret-jwt-key-change-in-production-min-64-chars
-
-
