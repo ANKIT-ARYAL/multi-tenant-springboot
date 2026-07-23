@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/crm_db
-    username: postgres
-    password: password123
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/crm_db_wymu}
+    username: ${SPRING_DATASOURCE_USERNAME:crm_db_wymu_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:q3dD3SXqTKU5IPVrZcZHgOptUkNJTMjt}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -18,3 +18,5 @@ spring:
 
 jwt:
   secret: super-secret-jwt-key-change-in-production-min-64-chars
+
+
